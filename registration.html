@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        animation: slideIn 1s ease;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    select,
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+    .form-group {
+        position: relative;
+    }
+
+    .form-group label {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        pointer-events: none;
+        transition: 0.3s ease all;
+    }
+
+    .form-group input:focus ~ label,
+    .form-group input:valid ~ label,
+    .form-group select:focus ~ label,
+    .form-group select:valid ~ label,
+    .form-group textarea:focus ~ label,
+    .form-group textarea:valid ~ label {
+        top: -15px;
+        font-size: 12px;
+        color: #4CAF50;
+    }
+
+    .form-group textarea {
+        height: 100px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration Form</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Name</label>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+            <input type="date" id="dob" name="dob" required>
+            <label for="dob">Date of Birth</label>
+        </div>
+        <div class="form-group">
+            <select id="course" name="course" required>
+               
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="English">English</option>
+            </select>
+            <label for="course">Course</label>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>
+
